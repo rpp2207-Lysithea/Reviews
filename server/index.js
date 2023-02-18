@@ -1,10 +1,8 @@
 const express = require("express");
 const { rmSync } = require("fs");
-const { Client } = require('pg');
+const client = require('./db.js');
 const format = require('pg-format');
-
-var client;
-
+console.log(client);
 const app = express();
 
 app.get('/', (req, res) => {
@@ -182,11 +180,6 @@ app.put('/reviews/:review_id/report', (req, res) => {
 const PORT = 3000;
 
 app.listen(PORT, () => {
-  client = new Client({
-    database: 'reviews',
-    user: 'postgres',
-    password: ''
-  });
   client.connect();
   console.log(`Server listening at http://localhost:${PORT}`);
 });

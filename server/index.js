@@ -3,7 +3,10 @@ const { rmSync } = require("fs");
 const { Client } = require('pg');
 const format = require('pg-format');
 
-const client = new Client({ database: 'reviews' });
+const client = new Client({ 
+  database: 'reviews',
+  password: ''
+});
 
 const app = express();
 

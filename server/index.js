@@ -186,7 +186,7 @@ app.put('/reviews/:review_id/report', (req, res) => {
 const PORT = 3000;
 
 app.listen(PORT, () => {
-  client.connect();
+  // client.connect();
   console.log(`Server listening at http://localhost:${PORT}`);
 });
 

@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
   res.send('WELCOME!');
 });
 
+app.get('/loaderio-74197092e52082babff1600e059f9c4f/', (req, res) => {
+  res.status(200);
+  res.send('loaderio-74197092e52082babff1600e059f9c4f')
+});
+
 app.get('/reviews/', (req, res) => {
   let page = !parseInt(req.query.page) ? 1 : parseInt(req.query.page);
   let count = !parseInt(req.query.count) ? 5 : parseInt(req.query.count);
